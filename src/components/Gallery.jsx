@@ -18,7 +18,7 @@ const dynamicItems = Object.keys(imageModules).map((filePath) => {
 
 const Gallery = () => {
   return (
-    <section id="collection" className="section container" style={{ paddingBottom: '8rem' }}>
+    <section id="collection" className="section container" style={{ paddingTop: '10rem', paddingBottom: '8rem', minHeight: '100vh' }}>
        <h2 style={{ fontSize: '2.5rem', marginBottom: '4rem', textAlign: 'center', color: 'var(--accent-color)' }}>
         Our Collection
       </h2>

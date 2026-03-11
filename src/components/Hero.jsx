@@ -43,20 +43,6 @@ const Hero = () => {
         </p>
       </div>
 
-      <div 
-        style={{
-          position: 'absolute',
-          bottom: '3rem',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          animation: 'bounce 2s infinite',
-          opacity: 0.6
-        }}
-      >
-        <span style={{ fontSize: '0.8rem', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Scroll</span>
-        <div style={{ width: '1px', height: '40px', backgroundColor: 'var(--text-main)', margin: '10px auto 0' }} />
-      </div>
-
       <style>{`
         @keyframes bounce {
           0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
