@@ -1,0 +1,92 @@
+import React from 'react';
+
+// We will map these items once images become available.
+// For now, we will create beautifully styled placeholder blocks that fit the dark theme.
+const ITEMS = [
+  "Aroma Candles", 
+  "Intention Candle", 
+  "Perfume", 
+  "Solid Perfume", 
+  "Attar", 
+  "Wax Sachets", 
+  "Organic Teas"
+];
+
+const Gallery = () => {
+  return (
+    <section className="section container" style={{ paddingBottom: '8rem' }}>
+       <h2 style={{ fontSize: '2.5rem', marginBottom: '4rem', textAlign: 'center', color: 'var(--accent-color)' }}>
+        Our Collection
+      </h2>
+
+      <div 
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+          gap: '2rem'
+        }}
+      >
+        {ITEMS.map((item, index) => (
+          <div 
+            key={index} 
+            className="gallery-item"
+            style={{
+              position: 'relative',
+              aspectRatio: '3 / 4',
+              backgroundColor: 'var(--secondary-bg)',
+              overflow: 'hidden',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              border: '1px solid rgba(255,255,255,0.05)'
+            }}
+          >
+            {/* Placeholder for images: this div represents where the image will go */}
+            <div 
+              className="gallery-image-placeholder"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                background: 'linear-gradient(45deg, var(--secondary-bg) 0%, #1a1918 100%)',
+                opacity: 0.8,
+                transition: 'opacity 0.5s ease',
+              }}
+            />
+            
+            <div 
+              style={{
+                position: 'relative',
+                zIndex: 2,
+                padding: '1.5rem',
+                textAlign: 'center',
+                width: '100%',
+                background: 'linear-gradient(to top, rgba(13,13,12,0.9), transparent)',
+                marginTop: 'auto'
+              }}
+            >
+              <h3 style={{ fontSize: '1.2rem', letterSpacing: '0.05em', color: 'var(--text-main)', fontFamily: 'var(--font-sans)', fontWeight: 300 }}>
+                {item}
+              </h3>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <style>{`
+        .gallery-item:hover .gallery-image-placeholder {
+          opacity: 0.4;
+          transform: scale(1.05); /* very subtle scale for luxury feel */
+        }
+        .gallery-image-placeholder {
+          transition: var(--transition-smooth);
+        }
+      `}</style>
+    </section>
+  );
+};
+
+export default Gallery;
