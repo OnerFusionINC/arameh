@@ -3,7 +3,7 @@ import { Instagram, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: 'var(--secondary-bg)', padding: '6rem 5% 2rem', borderTop: '1px solid rgba(209,191,174,0.1)' }}>
+    <footer id="contact" style={{ backgroundColor: 'var(--secondary-bg)', padding: '6rem 5% 2rem', borderTop: '1px solid rgba(181,155,124,0.1)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '4rem' }}>
         
         <div style={{ flex: '1 1 300px' }}>

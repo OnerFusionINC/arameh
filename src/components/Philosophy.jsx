@@ -2,7 +2,7 @@ import React from 'react';
 
 const Philosophy = () => {
   return (
-    <section className="section" style={{ backgroundColor: 'var(--primary-bg)', padding: '8rem 5%' }}>
+    <section id="philosophy" className="section" style={{ backgroundColor: 'var(--primary-bg)', padding: '8rem 5%' }}>
       <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', color: 'var(--accent-color)' }}>The Philosophy</h2>
         

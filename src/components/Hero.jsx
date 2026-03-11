@@ -3,6 +3,7 @@ import React from 'react';
 const Hero = () => {
   return (
     <section 
+      id="home"
       style={{
         height: '100vh',
         display: 'flex',

@@ -14,7 +14,7 @@ const ITEMS = [
 
 const Gallery = () => {
   return (
-    <section className="section container" style={{ paddingBottom: '8rem' }}>
+    <section id="collection" className="section container" style={{ paddingBottom: '8rem' }}>
        <h2 style={{ fontSize: '2.5rem', marginBottom: '4rem', textAlign: 'center', color: 'var(--accent-color)' }}>
         Our Collection
       </h2>
