@@ -16,8 +16,8 @@ const Hero = () => {
         overflow: 'hidden'
       }}
     >
-      {/* Decorative calm background elements could go here */}
-      
+      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1, opacity: 0.15, backgroundImage: 'url(/arameh/logo.png)', backgroundSize: 'cover', backgroundPosition: 'center', filter: 'blur(4px)' }} />
+
       <div className="fade-in" style={{ zIndex: 2, maxWidth: '800px' }}>
         <h1 
           style={{ 

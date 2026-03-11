@@ -3,13 +3,13 @@ import React from 'react';
 // We will map these items once images become available.
 // For now, we will create beautifully styled placeholder blocks that fit the dark theme.
 const ITEMS = [
-  "Aroma Candles", 
-  "Intention Candle", 
-  "Perfume", 
-  "Solid Perfume", 
-  "Attar", 
-  "Wax Sachets", 
-  "Organic Teas"
+  { name: "Aroma Candles", image: "/arameh/candle.png" },
+  { name: "Intention Candle", image: "/arameh/candle.png" },
+  { name: "Perfume", image: "/arameh/perfume.png" },
+  { name: "Solid Perfume", image: "/arameh/perfume.png" },
+  { name: "Attar", image: "/arameh/perfume.png" },
+  { name: "Wax Sachets", image: "/arameh/candle.png" },
+  { name: "Organic Teas", image: "/arameh/perfume.png" }, // placeholder fallback
 ];
 
 const Gallery = () => {
@@ -42,7 +42,22 @@ const Gallery = () => {
               border: '1px solid rgba(255,255,255,0.05)'
             }}
           >
-            {/* Placeholder for images: this div represents where the image will go */}
+            {/* Image layered below the gradient */}
+            <div 
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                backgroundImage: `url(${item.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                opacity: 0.6,
+                zIndex: 0
+              }}
+            />
+
             <div 
               className="gallery-image-placeholder"
               style={{
@@ -52,8 +67,9 @@ const Gallery = () => {
                 width: '100%',
                 height: '100%',
                 background: 'linear-gradient(45deg, var(--secondary-bg) 0%, #1a1918 100%)',
-                opacity: 0.8,
+                opacity: 0.2,
                 transition: 'opacity 0.5s ease',
+                zIndex: 1
               }}
             />
             
@@ -69,7 +85,7 @@ const Gallery = () => {
               }}
             >
               <h3 style={{ fontSize: '1.2rem', letterSpacing: '0.05em', color: 'var(--text-main)', fontFamily: 'var(--font-sans)', fontWeight: 300 }}>
-                {item}
+                {item.name}
               </h3>
             </div>
           </div>
