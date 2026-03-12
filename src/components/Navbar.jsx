@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
+  const currentPath = window.location.pathname;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,11 +15,18 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Philosophy', path: '/philosophy' },
-    { name: 'Collection', path: '/collection' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Home', path: 'index.html', match: '/' },
+    { name: 'Philosophy', path: 'philosophy.html', match: 'philosophy.html' },
+    { name: 'Collection', path: 'collection.html', match: 'collection.html' },
+    { name: 'Contact', path: 'contact.html', match: 'contact.html' }
   ];
+
+  const getIsActive = (match) => {
+    if (match === '/') {
+      return currentPath.endsWith('/') || currentPath.endsWith('index.html');
+    }
+    return currentPath.includes(match);
+  };
 
   return (
     <>
@@ -42,18 +48,18 @@ const Navbar = () => {
         }}
       >
         <div style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', letterSpacing: '0.1em', fontWeight: 500 }}>
-          <Link to="/" style={{ color: 'var(--text-main)', textDecoration: 'none' }}>ARAMEH</Link>
+          <a href="index.html" style={{ color: 'var(--text-main)', textDecoration: 'none' }}>ARAMEH</a>
         </div>
 
         {/* Desktop Nav */}
         <div className="desktop-nav" style={{ display: 'none' }}>
           <ul style={{ display: 'flex', gap: '2.5rem', listStyle: 'none', margin: 0, padding: 0 }}>
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive = getIsActive(link.match);
               return (
                 <li key={link.name}>
-                  <Link 
-                    to={link.path} 
+                  <a 
+                    href={link.path} 
                     style={{ 
                       fontSize: '0.85rem', 
                       textTransform: 'uppercase', 
@@ -65,7 +71,7 @@ const Navbar = () => {
                     }}
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               );
             })}
@@ -101,22 +107,25 @@ const Navbar = () => {
         }}
       >
         <ul style={{ listStyle: 'none', padding: 0, textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-          {navLinks.map((link) => (
-            <li key={link.name}>
-              <Link 
-                to={link.path} 
-                onClick={() => setMobileMenuOpen(false)}
-                style={{ 
-                  fontFamily: 'var(--font-serif)',
-                  fontSize: '2rem',
-                  color: location.pathname === link.path ? 'var(--accent-color)' : 'var(--text-main)',
-                  textDecoration: 'none'
-                }}
-              >
-                {link.name}
-              </Link>
-            </li>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = getIsActive(link.match);
+            return (
+              <li key={link.name}>
+                <a 
+                  href={link.path} 
+                  onClick={() => setMobileMenuOpen(false)}
+                  style={{ 
+                    fontFamily: 'var(--font-serif)',
+                    fontSize: '2rem',
+                    color: isActive ? 'var(--accent-color)' : 'var(--text-main)',
+                    textDecoration: 'none'
+                  }}
+                >
+                  {link.name}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
 
