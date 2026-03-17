@@ -187,14 +187,6 @@ img {
   margin-bottom: 0.5rem;
 }
 
-.stars {
-  color: var(--accent-color);
-}
-
-.review-count {
-  color: var(--text-muted);
-  font-size: 0.7rem;
-}
 
 .category {
   text-transform: uppercase;
@@ -211,22 +203,6 @@ img {
   letter-spacing: 0.05em;
 }
 
-.product-price-wrapper {
-  margin-bottom: 0.75rem;
-}
-
-.original-price {
-  text-decoration: line-through;
-  color: var(--text-muted);
-  margin-right: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.current-price {
-  font-weight: 600;
-  color: var(--text-main);
-  font-size: 1.1rem;
-}
 
 .product-description {
   font-size: 0.85rem;
@@ -234,25 +210,4 @@ img {
   margin-bottom: 1.5rem;
   line-height: 1.4;
   font-style: italic; /* Adding the poetic feel */
-}
-
-.select-options-btn {
-  margin-top: auto;
-  width: 100%;
-  padding: 0.8rem;
-  background-color: transparent;
-  color: var(--text-main);
-  border: 1px solid var(--text-main);
-  font-family: var(--font-sans);
-  font-weight: 500;
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-
-.select-options-btn:hover {
-  background-color: var(--text-main);
-  color: var(--primary-bg);
 }

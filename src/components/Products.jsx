@@ -124,20 +124,13 @@ const Products = () => {
               
               <div className="product-info">
                 <div className="product-meta">
-                  <span className="stars">★★★★★ <span className="review-count">(42)</span></span>
                   <span className="category">{product.category}</span>
                 </div>
                 
                 <h3 className="product-title">{product.title}</h3>
                 
-                <div className="product-price-wrapper">
-                  <span className="original-price">{product.originalPrice}</span>
-                  <span className="current-price">{product.price}</span>
-                </div>
-                
                 <p className="product-description">{product.description}</p>
                 
-                <button className="select-options-btn">SELECT OPTIONS</button>
               </div>
             </div>
           ))}
