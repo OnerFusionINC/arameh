@@ -4,21 +4,18 @@ import product1 from '../assets/img/products/product_1.jpeg';
 import product2 from '../assets/img/products/product_2.jpeg';
 import product3 from '../assets/img/products/product_3.jpeg';
 import product4 from '../assets/img/products/product_4.jpeg';
-import product5 from '../assets/img/products/product_5.jpeg';
-import product6 from '../assets/img/products/product_6.jpeg';
-import product7 from '../assets/img/products/product_7.jpeg';
-import product8 from '../assets/img/products/product_8.jpeg';
+import productFeatured from '../assets/img/collection/product_049.jpeg';
+import productLuxury from '../assets/img/collection/product_074.jpeg';
 
 import video1 from '../assets/video/product_video_1.mp4';
 import video2 from '../assets/video/product_video_2.mp4';
-import video3 from '../assets/video/product_video_3.mp4';
 import video4 from '../assets/video/product_video_4.mp4';
 
 const productsData = [
   {
     id: 1,
     type: 'video',
-    src: video1,
+    src: video4, // Unique larger video
     badge: 'LUXURY',
     category: 'Ambient',
     title: 'Golden Glow',
@@ -36,7 +33,7 @@ const productsData = [
   {
     id: 3,
     type: 'video',
-    src: video2,
+    src: video1, // Unique video 1
     badge: 'NEW',
     category: 'Motion',
     title: 'Floral Whisper',
@@ -53,8 +50,8 @@ const productsData = [
   },
   {
     id: 5,
-    type: 'video',
-    src: video3,
+    type: 'image',
+    src: productFeatured, // Replaced duplicate video with high-quality image
     badge: 'LIMITED',
     category: 'Ethereal',
     title: 'Scented Aura',
@@ -72,7 +69,7 @@ const productsData = [
   {
     id: 7,
     type: 'video',
-    src: video4,
+    src: video2, // Replaced with video 2
     badge: 'FRESHLY BREWED',
     category: 'Warm',
     title: 'Cinnamon Ritual',
@@ -81,8 +78,8 @@ const productsData = [
   {
     id: 8,
     type: 'image',
-    src: product4,
-    badge: '',
+    src: productLuxury, // Replaced with unique luxury image
+    badge: 'LUXURY',
     category: 'Citrus',
     title: 'Bergamot Sunrise',
     description: 'Crisp morning air laced with Italian citrus.',
