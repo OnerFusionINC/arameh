@@ -17,8 +17,6 @@ const productsData = [
     category: 'Gourmand',
     title: 'Velvet Rose & Oud',
     description: 'A decadent embrace of dark damask rose and smoky wood.',
-    originalPrice: '₹2,499',
-    price: '₹1,899',
   },
   {
     id: 2,
@@ -27,8 +25,6 @@ const productsData = [
     category: 'Fresh',
     title: 'Midnight Jasmine',
     description: 'Blooming white florals under a moonlit sky.',
-    originalPrice: '₹1,999',
-    price: '₹1,499',
   },
   {
     id: 3,
@@ -37,8 +33,6 @@ const productsData = [
     category: 'Woody',
     title: 'Sandalwood Echo',
     description: 'The quiet resonance of sacred woods and amber.',
-    originalPrice: '₹2,799',
-    price: '₹2,199',
   },
   {
     id: 4,
@@ -47,8 +41,6 @@ const productsData = [
     category: 'Citrus',
     title: 'Bergamot Sunrise',
     description: 'Crisp morning air laced with Italian citrus.',
-    originalPrice: '₹1,499',
-    price: '₹1,199',
   },
   {
     id: 5,
@@ -57,8 +49,6 @@ const productsData = [
     category: 'Warm',
     title: 'Vanilla Bourbon',
     description: 'Poured over ice with a whisper of sweetness.',
-    originalPrice: '₹2,199',
-    price: '₹1,699',
   },
   {
     id: 6,
@@ -67,8 +57,6 @@ const productsData = [
     category: 'Floral',
     title: 'Peony Blush',
     description: 'Soft petals wrapped in suede and red apple.',
-    originalPrice: '₹1,899',
-    price: '₹1,399',
   },
   {
     id: 7,
@@ -77,8 +65,6 @@ const productsData = [
     category: 'Earthy',
     title: 'Vetiver Rain',
     description: 'The grounding scent of damp earth after a storm.',
-    originalPrice: '₹2,299',
-    price: '₹1,799',
   },
   {
     id: 8,
@@ -87,8 +73,6 @@ const productsData = [
     category: 'Spicy',
     title: 'Cinnamon Ember',
     description: 'Glowing embers crackling on a winter evening.',
-    originalPrice: '₹2,999',
-    price: '₹2,499',
   },
 ];
 
@@ -117,9 +101,6 @@ const Products = () => {
                   <span className="product-badge">{product.badge}</span>
                 )}
                 <img src={product.image} alt={product.title} className="product-image" />
-                <div className="product-overlay">
-                  <button className="quick-add-btn">QUICK ADD</button>
-                </div>
               </div>
               
               <div className="product-info">
