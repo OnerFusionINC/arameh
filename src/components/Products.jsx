@@ -9,70 +9,83 @@ import product6 from '../assets/img/products/product_6.jpeg';
 import product7 from '../assets/img/products/product_7.jpeg';
 import product8 from '../assets/img/products/product_8.jpeg';
 
+import video1 from '../assets/video/product_video_1.mp4';
+import video2 from '../assets/video/product_video_2.mp4';
+import video3 from '../assets/video/product_video_3.mp4';
+import video4 from '../assets/video/product_video_4.mp4';
+
 const productsData = [
   {
     id: 1,
-    image: product1,
+    type: 'video',
+    src: video1,
+    badge: 'LUXURY',
+    category: 'Ambient',
+    title: 'Golden Glow',
+    description: 'The flickering dance of light and shadow, capturing the essence of a serene evening.',
+  },
+  {
+    id: 2,
+    type: 'image',
+    src: product1,
     badge: 'BEST SELLER',
     category: 'Gourmand',
     title: 'Velvet Rose & Oud',
     description: 'A decadent embrace of dark damask rose and smoky wood.',
   },
   {
-    id: 2,
-    image: product2,
+    id: 3,
+    type: 'video',
+    src: video2,
+    badge: 'NEW',
+    category: 'Motion',
+    title: 'Floral Whisper',
+    description: 'Delicate petals caught in a gentle breeze, a symphony of white florals.',
+  },
+  {
+    id: 4,
+    type: 'image',
+    src: product2,
     badge: '',
     category: 'Fresh',
     title: 'Midnight Jasmine',
     description: 'Blooming white florals under a moonlit sky.',
   },
   {
-    id: 3,
-    image: product3,
+    id: 5,
+    type: 'video',
+    src: video3,
+    badge: 'LIMITED',
+    category: 'Ethereal',
+    title: 'Scented Aura',
+    description: 'An invisible trail of elegance that lingers long after you leave.',
+  },
+  {
+    id: 6,
+    type: 'image',
+    src: product3,
     badge: 'NEW',
     category: 'Woody',
     title: 'Sandalwood Echo',
     description: 'The quiet resonance of sacred woods and amber.',
   },
   {
-    id: 4,
-    image: product4,
+    id: 7,
+    type: 'video',
+    src: video4,
+    badge: 'FRESHLY BREWED',
+    category: 'Warm',
+    title: 'Cinnamon Ritual',
+    description: 'The comforting warmth of spiced tea on a rainy afternoon.',
+  },
+  {
+    id: 8,
+    type: 'image',
+    src: product4,
     badge: '',
     category: 'Citrus',
     title: 'Bergamot Sunrise',
     description: 'Crisp morning air laced with Italian citrus.',
-  },
-  {
-    id: 5,
-    image: product5,
-    badge: 'FRESHLY BREWED',
-    category: 'Warm',
-    title: 'Vanilla Bourbon',
-    description: 'Poured over ice with a whisper of sweetness.',
-  },
-  {
-    id: 6,
-    image: product6,
-    badge: 'SALE',
-    category: 'Floral',
-    title: 'Peony Blush',
-    description: 'Soft petals wrapped in suede and red apple.',
-  },
-  {
-    id: 7,
-    image: product7,
-    badge: '',
-    category: 'Earthy',
-    title: 'Vetiver Rain',
-    description: 'The grounding scent of damp earth after a storm.',
-  },
-  {
-    id: 8,
-    image: product8,
-    badge: 'LIMITED',
-    category: 'Spicy',
-    title: 'Cinnamon Ember',
-    description: 'Glowing embers crackling on a winter evening.',
   },
 ];
 
@@ -90,7 +103,7 @@ const Products = () => {
             fontFamily: 'var(--font-serif)',
           }}
         >
-          Our Best Sellers
+          Our Curated Collection
         </h2>
 
         <div className="products-grid">
@@ -100,7 +113,18 @@ const Products = () => {
                 {product.badge && (
                   <span className="product-badge">{product.badge}</span>
                 )}
-                <img src={product.image} alt={product.title} className="product-image" />
+                {product.type === 'video' ? (
+                  <video 
+                    src={product.src} 
+                    className="product-image" 
+                    autoPlay 
+                    muted 
+                    loop 
+                    playsInline 
+                  />
+                ) : (
+                  <img src={product.src} alt={product.title} className="product-image" />
+                )}
               </div>
               
               <div className="product-info">
@@ -111,7 +135,6 @@ const Products = () => {
                 <h3 className="product-title">{product.title}</h3>
                 
                 <p className="product-description">{product.description}</p>
-                
               </div>
             </div>
           ))}
