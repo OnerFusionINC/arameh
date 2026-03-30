@@ -17,7 +17,7 @@ const Hero = () => {
         overflow: 'hidden'
       }}
     >
-      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1, opacity: 0.15, backgroundImage: 'url(/arameh/logo.png)', backgroundSize: 'cover', backgroundPosition: 'center', filter: 'blur(4px)' }} />
+      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1, opacity: 0.15, backgroundImage: 'url(/logo.png)', backgroundSize: 'cover', backgroundPosition: 'center', filter: 'blur(4px)' }} />
 
       <div className="fade-in" style={{ zIndex: 2, maxWidth: '800px' }}>
         <h1 

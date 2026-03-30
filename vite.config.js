@@ -4,7 +4,7 @@ import { resolve } from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/arameh/',
+  base: '/',
   plugins: [react()],
   build: {
     rollupOptions: {
