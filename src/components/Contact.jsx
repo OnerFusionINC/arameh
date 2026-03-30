@@ -11,10 +11,10 @@ const Contact = () => {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '5rem', alignItems: 'center', textAlign: 'left' }}>
           
-          {/* Contact Form */}
           <form 
             action="https://formsubmit.co/info@aramehcreatives.com" 
             method="POST"
+            target="_blank"
             style={{ width: '100%', maxWidth: '600px', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
           >
             {/* FormSubmit Configuration */}
