@@ -7,7 +7,7 @@ const Footer = () => {
       <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '4rem' }}>
         
         <div style={{ flex: '1 1 300px' }}>
-          <h2 style={{ fontSize: '2rem', color: 'var(--accent-color)', marginBottom: '1rem' }}>ARAMEH</h2>
+          <img src="/footer.png" alt="Arameh" style={{ maxWidth: '180px', marginBottom: '1rem' }} />
           <p style={{ color: 'var(--text-muted)', fontWeight: 300, maxWidth: '300px', marginBottom: '2rem' }}>
             Where scent becomes identity. A house devoted to the art of fine fragrance, purity, and quiet luxury.
           </p>
@@ -46,7 +46,7 @@ const Footer = () => {
       </div>
 
       <div style={{ marginTop: '6rem', paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.05)', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.9rem', fontWeight: 300 }}>
-        &copy; {new Date().getFullYear()} Arameh. All rights reserved.
+        &copy; {new Date().getFullYear()} Arameh. All rights reserved | Designed By <a href="https://www.onerfusion.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid currentColor' }}>OnerFusion</a>
       </div>
     </footer>
   );
