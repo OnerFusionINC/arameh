@@ -9,13 +9,13 @@ const Contact = () => {
           We would love to hear from you. For inquiries, collaborations, or simply to learn more about our scents, please reach out using the form below.
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', textAlign: 'left' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '5rem', alignItems: 'center', textAlign: 'left' }}>
           
           {/* Contact Form */}
           <form 
             action="https://formsubmit.co/info@aramehcreatives.com" 
             method="POST"
-            style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
+            style={{ width: '100%', maxWidth: '600px', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
           >
             {/* FormSubmit Configuration */}
             <input type="hidden" name="_captcha" value="false" />
@@ -30,9 +30,9 @@ const Contact = () => {
                 id="name" 
                 required 
                 placeholder="Your Name"
-                style={{ padding: '0.8rem 1rem', backgroundColor: 'transparent', border: '1px solid rgba(255,255,255,0.2)', color: 'var(--text-main)', outline: 'none', transition: 'border-color 0.3s', fontSize: '1rem' }}
+                style={{ padding: '0.8rem 1rem', backgroundColor: 'transparent', border: '1px solid rgba(181,155,124,0.4)', color: 'var(--text-main)', outline: 'none', transition: 'border-color 0.3s', fontSize: '1rem' }}
                 onFocus={(e) => e.target.style.borderColor = 'var(--accent-color)'}
-                onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.2)'}
+                onBlur={(e) => e.target.style.borderColor = 'rgba(181,155,124,0.4)'}
               />
             </div>
 
@@ -44,9 +44,9 @@ const Contact = () => {
                 id="email" 
                 required 
                 placeholder="your.email@example.com"
-                style={{ padding: '0.8rem 1rem', backgroundColor: 'transparent', border: '1px solid rgba(255,255,255,0.2)', color: 'var(--text-main)', outline: 'none', transition: 'border-color 0.3s', fontSize: '1rem' }}
+                style={{ padding: '0.8rem 1rem', backgroundColor: 'transparent', border: '1px solid rgba(181,155,124,0.4)', color: 'var(--text-main)', outline: 'none', transition: 'border-color 0.3s', fontSize: '1rem' }}
                 onFocus={(e) => e.target.style.borderColor = 'var(--accent-color)'}
-                onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.2)'}
+                onBlur={(e) => e.target.style.borderColor = 'rgba(181,155,124,0.4)'}
               />
             </div>
 
@@ -58,9 +58,9 @@ const Contact = () => {
                 required 
                 rows="5"
                 placeholder="How can we help you?"
-                style={{ padding: '0.8rem 1rem', backgroundColor: 'transparent', border: '1px solid rgba(255,255,255,0.2)', color: 'var(--text-main)', outline: 'none', resize: 'vertical', transition: 'border-color 0.3s', fontSize: '1rem', fontFamily: 'inherit' }}
+                style={{ padding: '0.8rem 1rem', backgroundColor: 'transparent', border: '1px solid rgba(181,155,124,0.4)', color: 'var(--text-main)', outline: 'none', resize: 'vertical', transition: 'border-color 0.3s', fontSize: '1rem', fontFamily: 'inherit' }}
                 onFocus={(e) => e.target.style.borderColor = 'var(--accent-color)'}
-                onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.2)'}
+                onBlur={(e) => e.target.style.borderColor = 'rgba(181,155,124,0.4)'}
               ></textarea>
             </div>
 
@@ -75,21 +75,23 @@ const Contact = () => {
           </form>
 
           {/* Contact Details Column */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem', paddingTop: '1rem' }}>
-            <div>
-              <h4 style={{ fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '0.75rem', color: 'var(--text-main)' }}>Email Direct</h4>
-              <a href="mailto:info@aramehcreatives.com" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '1.1rem', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = 'var(--accent-color)'} onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}>info@aramehcreatives.com</a>
-            </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem', width: '100%', maxWidth: '600px', borderTop: '1px solid rgba(181,155,124,0.2)', paddingTop: '3rem' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '2rem' }}>
+              <div>
+                <h4 style={{ fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '0.75rem', color: 'var(--text-main)' }}>Email Direct</h4>
+                <a href="mailto:info@aramehcreatives.com" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '1.1rem', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = 'var(--accent-color)'} onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}>info@aramehcreatives.com</a>
+              </div>
 
-            <div>
-              <h4 style={{ fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '0.75rem', color: 'var(--text-main)' }}>Phone</h4>
-              <p style={{ color: 'var(--text-muted)', margin: '0 0 0.5rem 0', fontSize: '1.1rem' }}>+91 97692 77555</p>
-              <p style={{ color: 'var(--text-muted)', margin: 0, fontSize: '1.1rem' }}>+91 97020 77555</p>
-            </div>
+              <div>
+                <h4 style={{ fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '0.75rem', color: 'var(--text-main)' }}>Phone</h4>
+                <p style={{ color: 'var(--text-muted)', margin: '0 0 0.5rem 0', fontSize: '1.1rem' }}>+91 97692 77555</p>
+                <p style={{ color: 'var(--text-muted)', margin: 0, fontSize: '1.1rem' }}>+91 97020 77555</p>
+              </div>
 
-            <div>
-              <h4 style={{ fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '0.75rem', color: 'var(--text-main)' }}>Social</h4>
-              <a href="https://www.instagram.com/p/DRTxybYjE2C/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '1.1rem', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = 'var(--accent-color)'} onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}>Instagram</a>
+              <div>
+                <h4 style={{ fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '0.75rem', color: 'var(--text-main)' }}>Social</h4>
+                <a href="https://www.instagram.com/p/DRTxybYjE2C/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '1.1rem', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = 'var(--accent-color)'} onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}>Instagram</a>
+              </div>
             </div>
           </div>
 
